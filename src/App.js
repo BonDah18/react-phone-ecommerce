@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {BrowserRouter as Router} from 'react-router-dom';
+import {Switch,Route} from 'react-router-dom';
 import logo from './logo.svg';
 import "./App.css";
 import Navbar from './components/Navbar';
@@ -13,10 +13,12 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navbar />
-        <ProductList/ >
-        <Details />
-        <Cart />
-        <Default />
+        <Switch>
+          <Route path="/" component={ProductList} />
+          <Route path="/details" component={Details} />
+          <Route path="/cart" component={Cart} />
+          <Route component={Default} />
+        </Switch>
       </React.Fragment>
 
     );
