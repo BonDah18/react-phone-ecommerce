@@ -76,7 +76,7 @@ getItem = (id) =>{
       const product = tempCart[index];
 
       product.count = product.count = 1;
-      product.total = prooduct.count * product.price;
+      product.total = product.count * product.price;
 
       this.setState(
         () => {
