@@ -9,8 +9,7 @@ export default function CartItem(item, value) {
       <div className="row my-2 text-capitalize text-center">
       <div className="col-1- mx-auto col-lg-2">
       <img 
-      src={img} s
-      tyle={{width:"5rem", height:"5rem"}} 
+      src={img} style={{width:"5rem", height:"5rem"}} 
       className="img-fluid" 
       alt="product"/>
        </div>
@@ -26,9 +25,11 @@ export default function CartItem(item, value) {
       <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
       <div className="d-flex justify-content-center">
       <div>
+       {/*decrement*/}
         <span className="btn btn-black mx-1" onClick={() => decrement(id)}>
         -
         </span>
+         {/*increment*/}
         <span className="btn btn-black mx-1">{count}</span>
         <span className="btn btn-black mx-1" onClick={() => increment(id)}>
         +
@@ -36,7 +37,7 @@ export default function CartItem(item, value) {
       </div>
       </div>
       </div>
-      {/* */}
+      {/* before end of main row*/}
       <div className="col-1- mx-auto col-lg-2">
         <div className="cart-icon" onClick={() => removeItem(id)}>
         <i className="fas fa-trash" />
