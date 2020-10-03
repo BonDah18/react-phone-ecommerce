@@ -37,7 +37,7 @@ export default function CartTotals({value, history}) {
         <PaypalButton 
         total={cartTotal} 
         clearCart={clearCart} 
-        history={history}/>
+        history={history} />
       </div>
       </div>
       </div>
