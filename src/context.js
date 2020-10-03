@@ -6,7 +6,7 @@ const ProductContext = React.createContext();
 //Consumer
 
 class ProductProvider extends Component {
-  state ={
+  state = {
     products: [], 
     detailProduct: detailProduct,
     cart: [],
@@ -27,7 +27,7 @@ class ProductProvider extends Component {
 
     });
     this.setState(()=> {
-      return{products:tempProducts};
+      return {products:tempProducts};
     });
   };
 
@@ -134,7 +134,7 @@ getItem = (id) => {
     clearCart = () => {
       this.setState(() => {
         return {cart: [] };
-      },()=>{
+      },() => {
         this.setProducts();
         this.addTotals();
       });
