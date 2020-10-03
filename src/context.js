@@ -147,7 +147,7 @@ getItem = (id) => {
       const total = subTotal = tax
       this.setState(() => {
         return {
-          cartsubTotal:subTotal,
+          cartSubTotal:subTotal,
           cartTax:tax,
           cartTotal:total
         }
