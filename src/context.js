@@ -115,7 +115,7 @@ getItem = (id) => {
 
       tempCart = tempCart.filter(item => item.id !== id);
 
-      const index = tempProducts.indexOf(this.getItem(id))
+      const index = tempProducts.indexOf(this.getItem(id));
       let removedProduct = tempProducts[index];
       removedProduct.inCart = false;
       removedProduct.count = 0;
@@ -125,7 +125,7 @@ getItem = (id) => {
         return {
           cart:[...tempCart],
           products:[...tempProducts]
-        }
+        };
       },() => {
         this.addTotals();
       })
@@ -144,15 +144,15 @@ getItem = (id) => {
       this.state.cart.map(item => (subTotal += item.total));
       const tempTax = subTotal * 0.1;
       const tax = parseFloat(tempTax.toFixed(2));
-      const total = subTotal = tax
+      const total = subTotal + tax
       this.setState(() => {
         return {
           cartSubTotal:subTotal.toFixed(2),
           cartTax:tax.toFixed(2),
           cartTotal:total.toFixed(2)
         }
-      });
-    }
+      })
+    };
   render() {
     return (
       <ProductContext.Provider 
